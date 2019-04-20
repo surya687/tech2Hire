@@ -13,6 +13,10 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
     var userCurrentLocation : CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+
+    @IBAction func getAllAtms(_ sender: Any) {
         let atms = allATMs()
         for atm in atms{
             print(atm.bankAssociated!)
@@ -20,7 +24,6 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
             print(atm.workingStatus)
         }
     }
-
     
     
     @IBAction func searchATMByBank(_ sender: UIButton) {

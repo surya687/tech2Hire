@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Admin-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ATMInformation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Admin" customClass="FirstViewController" customModule="ATMInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Admin" image="first" id="acW-dT-cKf" userLabel="Admin"/>
                     <connections>
                         <outlet property="bankAssociated" destination="KJb-C1-Bpj" id="yed-yx-RaW"/>
                         <outlet property="location" destination="MJJ-TV-w13" id="1Zj-Xi-U7o"/>
@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--User-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ATMInformation" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,19 +106,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3q-DD-mxe">
-                                <rect key="frame" x="124" y="312" width="124" height="30"/>
+                                <rect key="frame" x="99" y="312" width="174" height="30"/>
                                 <state key="normal" title="SearchByLocation"/>
                                 <connections>
                                     <action selector="searchATMByWorkingStatus:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="UAj-mN-vrD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Z-HH-VeL">
+                                <rect key="frame" x="100" y="372" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GiveAllAtms"/>
+                                <connections>
+                                    <action selector="getAllAtms:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="UFT-Oi-9Hq"/>
+                                    <action selector="searchATMByWorkingStatus:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xXe-T2-zmi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fwB-Xq-w0V" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="133" id="2jB-Iq-2ed"/>
+                            <constraint firstItem="J3q-DD-mxe" firstAttribute="trailing" secondItem="fwB-Xq-w0V" secondAttribute="trailing" id="83R-1M-Ou4"/>
+                            <constraint firstItem="J3q-DD-mxe" firstAttribute="leading" secondItem="fwB-Xq-w0V" secondAttribute="leading" id="Aev-js-W3u"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="zEq-FU-wV5" secondAttribute="trailing" constant="154" id="Aqt-fR-opx"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="fwB-Xq-w0V" secondAttribute="trailing" constant="102" id="EkK-KU-3Jd"/>
-                            <constraint firstItem="J3q-DD-mxe" firstAttribute="centerX" secondItem="fwB-Xq-w0V" secondAttribute="centerX" id="FZX-hb-cvS"/>
                             <constraint firstItem="J3q-DD-mxe" firstAttribute="top" secondItem="fwB-Xq-w0V" secondAttribute="bottom" constant="27" id="Htl-Mb-t0R"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="148" id="JEY-vI-jos"/>
                             <constraint firstItem="fwB-Xq-w0V" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="99" id="fLB-du-cPg"/>
@@ -126,7 +136,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="User" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
