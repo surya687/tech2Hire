@@ -15,6 +15,8 @@
 		18375A35226AE57900DF2CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18375A33226AE57900DF2CC6 /* LaunchScreen.storyboard */; };
 		18375A3D226AE9F300DF2CC6 /* ATMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A3C226AE9F300DF2CC6 /* ATMModel.swift */; };
 		18375A41226AF19000DF2CC6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18375A3F226AF19000DF2CC6 /* Model.xcdatamodeld */; };
+		18375A48226B180D00DF2CC6 /* Atm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A46226B180D00DF2CC6 /* Atm+CoreDataClass.swift */; };
+		18375A49226B180D00DF2CC6 /* Atm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A47226B180D00DF2CC6 /* Atm+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		18375A36226AE57900DF2CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18375A3C226AE9F300DF2CC6 /* ATMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMModel.swift; sourceTree = "<group>"; };
 		18375A40226AF19000DF2CC6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		18375A46226B180D00DF2CC6 /* Atm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18375A47226B180D00DF2CC6 /* Atm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				18375A3F226AF19000DF2CC6 /* Model.xcdatamodeld */,
 				18375A3C226AE9F300DF2CC6 /* ATMModel.swift */,
+				18375A46226B180D00DF2CC6 /* Atm+CoreDataClass.swift */,
+				18375A47226B180D00DF2CC6 /* Atm+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18375A48226B180D00DF2CC6 /* Atm+CoreDataClass.swift in Sources */,
 				18375A3D226AE9F300DF2CC6 /* ATMModel.swift in Sources */,
 				18375A2D226AE57700DF2CC6 /* SecondViewController.swift in Sources */,
 				18375A41226AF19000DF2CC6 /* Model.xcdatamodeld in Sources */,
 				18375A29226AE57700DF2CC6 /* AppDelegate.swift in Sources */,
 				18375A2B226AE57700DF2CC6 /* FirstViewController.swift in Sources */,
+				18375A49226B180D00DF2CC6 /* Atm+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

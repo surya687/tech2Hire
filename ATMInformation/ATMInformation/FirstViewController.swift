@@ -8,44 +8,75 @@
 
 import UIKit
 import CoreData
-var context : NSManagedObjectContext!
-class FirstViewController: UIViewController {
+var container: NSPersistentContainer!
 
+class FirstViewController: UIViewController {
+    @IBOutlet weak var bankAssociated: UITextField!
+    
+    @IBOutlet weak var location: UITextField!
+    
+    @IBOutlet weak var workingStatus: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        context = appDelegate.persistentContainer.viewContext
-        guard context != nil else {
-            fatalError("This view needs a manged object context.")
-        }
-        guard let entity = NSEntityDescription.entity(forEntityName: "ATM", in: context) else{
-            fatalError()
-        }
-        let newATM = NSManagedObject(entity: entity, insertInto: context)
-        newATM.setValue("SBI", forKey: "bankAssociated")
-        newATM.setValue("location1", forKey: "location")
-        newATM.setValue(false, forKey: "workingStatus")
+        container = NSPersistentContainer(name: "Model")
         
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
-        
-        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "ATM")
-        
-        do{
-            let result = try context.fetch(fetchReq)
-            for data in result as! [NSManagedObject]{
-                print(data.value(forKey: "bankAssociated") as! String)
-                print(data.value(forKey: "location") as! String)
-                print(data.value(forKey: "workingStatus") as! Bool)
+        container.loadPersistentStores { storeDescription, error in
+            if let error = error {
+                print("\(error)")
             }
-        }catch{
-            print("fetch failes")
+        }
+                
+    }
+    
+    @IBAction func addATM(_ sender: UIButton) {
+        
+        let atm = Atm(context: container.viewContext)
+        atm.bankAssociated = self.bankAssociated.text
+        atm.location = self.location.text
+        if self.workingStatus.text! == "yes"{
+            atm.workingStatus = true
+        }else{
+            atm.workingStatus = false
         }
         
+        saveModelObjectContext()
+        clearTextFields()
+        
+//        var atms : [Atm] = []
+//
+//        let request = Atm.createFetchRequest()
+//        let sort = NSSortDescriptor(key: "bankAssociated", ascending: false)
+//        request.sortDescriptors = [sort]
+//
+//        do {
+//            atms = try container.viewContext.fetch(request)
+//            print("Got \(atms.count) atms")
+//            for atm in atms{
+//                print(atm.bankAssociated)
+//                print(atm.location)
+//                print(atm.workingStatus)
+//            }
+//        } catch {
+//            print("Fetch failed")
+//        }
     }
+    private func clearTextFields(){
+        self.bankAssociated.text = nil
+        self.location.text  = nil
+        self.workingStatus.text  = nil
+    }
+    
+    private func saveModelObjectContext(){
+        if container.viewContext.hasChanges{
+            do{
+                try container.viewContext.save()
+            }catch{
+                print("Error in saving the context")
+            }
+        }
+    }
+    
 
 
 }

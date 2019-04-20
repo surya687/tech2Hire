@@ -10,29 +10,18 @@ import Foundation
 import CoreLocation
 
 struct ATM{
-    private var bankAssociated : String!
-    private var location : CLLocation!
-    private var isWorking : Bool!
-    private var facilities : [String:Bool]!
+    var bankAssociated : String!
+    var location : CLLocation!
+    var isWorking : Bool!
+    var facilities : [String:Bool]!
     
-    init(){
-        self.bankAssociated = ""
-        self.location = nil
-        self.isWorking = nil
-        self.facilities = nil
+    init( bankAssociated : String,location : CLLocation,isWorking : Bool,facilities : [String:Bool]){
+        self.bankAssociated = bankAssociated
+        self.location = location
+        self.isWorking = isWorking
+        self.facilities = facilities
     }
-    func getBankAssociated()-> String{
-        return self.bankAssociated
-    }
-    func getLocation()-> CLLocation{
-        return self.location
-    }
-    func getIsWorking()-> Bool{
-        return self.isWorking
-    }
-    func getFacilities()-> [String:Bool]{
-        return self.facilities
-    }
+    
 }
 
 class ATMModel{
