@@ -43,6 +43,14 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
 //    }
     
     
+    @IBAction func searchATMByBank(_ sender: UIButton) {
+        searchATMby(associatedBank : "ICICI")
+    }
+    
+    @IBAction func searchATMByWorkingStatus(_ sender: Any) {
+        searchATMby(location: "Bhimavaram")
+    }
+    
     
     func searchATMby(associatedBank : String)->[Atm]{
         var atms : [Atm] = []
@@ -70,6 +78,31 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
 
     }
     
+    func searchATMby(location : String)->[Atm]{
+        var atms : [Atm] = []
+        
+        let request = Atm.createFetchRequest()
+        var workingStatusPredicate : NSPredicate?
+        
+        workingStatusPredicate = NSPredicate(format: "location == %@",location)
+        let sort = NSSortDescriptor(key: "location", ascending: false)
+        request.sortDescriptors = [sort]
+        request.predicate = workingStatusPredicate
+        
+        do {
+            atms = try container.viewContext.fetch(request)
+            print("Got \(atms.count) atms")
+            for atm in atms{
+                print(atm.bankAssociated)
+                print(atm.location)
+                print(atm.workingStatus)
+            }
+        } catch {
+            print("Fetch failed")
+        }
+        return atms
+        
+    }
 
 
 }
