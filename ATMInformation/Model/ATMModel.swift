@@ -29,7 +29,7 @@ class ATMModel{
         
     }
     func searchATM(byBankName : String)->[ATM]{
-        var atms : [ATM] = []
+        let atms : [ATM] = []
         return atms
     }
     
