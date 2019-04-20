@@ -42,24 +42,7 @@ class FirstViewController: UIViewController {
         
         saveModelObjectContext()
         clearTextFields()
-        
-//        var atms : [Atm] = []
-//
-//        let request = Atm.createFetchRequest()
-//        let sort = NSSortDescriptor(key: "bankAssociated", ascending: false)
-//        request.sortDescriptors = [sort]
-//
-//        do {
-//            atms = try container.viewContext.fetch(request)
-//            print("Got \(atms.count) atms")
-//            for atm in atms{
-//                print(atm.bankAssociated)
-//                print(atm.location)
-//                print(atm.workingStatus)
-//            }
-//        } catch {
-//            print("Fetch failed")
-//        }
+
     }
     private func clearTextFields(){
         self.bankAssociated.text = nil

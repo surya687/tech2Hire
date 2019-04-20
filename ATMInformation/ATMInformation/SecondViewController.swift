@@ -13,42 +13,26 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
     var userCurrentLocation : CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//
-//        let locationManager = CLLocationManager()
-//        //request permission to use location services
-//        locationManager.requestAlwaysAuthorization()
-//
-//
-//        if CLLocationManager.locationServicesEnabled(){
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//            locationManager.requestLocation()
-//
-//        }
-        
-        searchATMby(associatedBank: "ICICI")
-        
     }
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.last?.coordinate else{
-//            fatalError()
-//        }
-//        userCurrentLocation = location
-//        print(location)
-//    }
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        print(error)
-//    }
+
     
     
     @IBAction func searchATMByBank(_ sender: UIButton) {
-        searchATMby(associatedBank : "ICICI")
+        let atms = searchATMby(associatedBank : "ICICI")
+        for atm in atms{
+            print(atm.bankAssociated!)
+            print(atm.location!)
+            print(atm.workingStatus)
+        }
     }
     
     @IBAction func searchATMByWorkingStatus(_ sender: Any) {
-        searchATMby(location: "Bhimavaram")
+        let atms = searchATMby(location: "Bhimavaram")
+        for atm in atms{
+            print(atm.bankAssociated!)
+            print(atm.location!)
+            print(atm.workingStatus)
+        }
     }
     
     
@@ -66,11 +50,7 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
         do {
             atms = try container.viewContext.fetch(request)
             print("Got \(atms.count) atms")
-            for atm in atms{
-                print(atm.bankAssociated)
-                print(atm.location)
-                print(atm.workingStatus)
-            }
+            
         } catch {
             print("Fetch failed")
         }
@@ -92,11 +72,6 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
         do {
             atms = try container.viewContext.fetch(request)
             print("Got \(atms.count) atms")
-            for atm in atms{
-                print(atm.bankAssociated)
-                print(atm.location)
-                print(atm.workingStatus)
-            }
         } catch {
             print("Fetch failed")
         }
