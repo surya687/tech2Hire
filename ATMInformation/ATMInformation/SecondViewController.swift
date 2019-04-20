@@ -13,6 +13,12 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
     var userCurrentLocation : CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
+        let atms = allATMs()
+        for atm in atms{
+            print(atm.bankAssociated!)
+            print(atm.location!)
+            print(atm.workingStatus)
+        }
     }
 
     
@@ -68,6 +74,26 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate {
         let sort = NSSortDescriptor(key: "location", ascending: false)
         request.sortDescriptors = [sort]
         request.predicate = workingStatusPredicate
+        
+        do {
+            atms = try container.viewContext.fetch(request)
+            print("Got \(atms.count) atms")
+        } catch {
+            print("Fetch failed")
+        }
+        return atms
+        
+    }
+    
+    func allATMs()->[Atm]{
+        var atms : [Atm] = []
+        
+        let request = Atm.createFetchRequest()
+//        var workingStatusPredicate : NSPredicate?
+//
+        let sort = NSSortDescriptor(key: "location", ascending: false)
+        request.sortDescriptors = [sort]
+//        request.predicate = workingStatusPredicate
         
         do {
             atms = try container.viewContext.fetch(request)
