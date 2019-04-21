@@ -29,6 +29,10 @@ class NewATMFormViewController: UIViewController {
     }
     
     @IBAction func saveAtm(_ sender: UIButton) {
+        guard validateNewAtmForm() else{
+            return
+        }
+        
         var facilities : [String:Bool] = [:]
         facilities.updateValue(acFacility.isOn, forKey: "Ac")
         facilities.updateValue(multipleAtmsFacility.isOn, forKey: "MultipleAtms")
@@ -45,5 +49,24 @@ class NewATMFormViewController: UIViewController {
         
     }
     
+    private func validateNewAtmForm()->Bool {
+        guard let bank = associatedBank.text,bank != "" else {
+            print("Enter valid Associated bank name")
+            return false
+        }
+        guard let location = location.text,location != "" else {
+            print("Enter valid Location")
+            return false
+        }
+        guard let latitude = latitude.text,latitude != "" else {
+            print("Enter valid latitude")
+            return false
+        }
+        guard let longitude = longitude.text,longitude != "" else {
+            print("Enter valid longitude")
+            return false
+        }
+        return true
+    }
 
 }
