@@ -10,58 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ATMInformation2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ATMInformation2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFK-aa-fuJ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login As Admin/User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFK-aa-fuJ">
                                 <rect key="frame" x="50" y="134" width="273.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-0R-Ndw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-0R-Ndw">
                                 <rect key="frame" x="50" y="192" width="273.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZV-TQ-Vnj">
-                                <rect key="frame" x="75" y="349" width="44" height="30"/>
-                                <state key="normal" title="Admin"/>
-                                <connections>
-                                    <segue destination="XQ0-O2-W8o" kind="show" id="HLI-yL-m0p"/>
-                                </connections>
+                                <rect key="frame" x="168.5" y="387" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBf-vh-B1a">
-                                <rect key="frame" x="267" y="349" width="33" height="30"/>
-                                <state key="normal" title="User"/>
-                                <connections>
-                                    <segue destination="sYJ-oj-C72" kind="show" id="A8a-oS-XUL"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pto-TH-VGQ">
+                                <rect key="frame" x="50" y="250" width="273.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="qFK-aa-fuJ" secondAttribute="trailing" constant="51.5" id="8VC-Ry-kOK"/>
-                            <constraint firstItem="EBf-vh-B1a" firstAttribute="top" secondItem="uZV-TQ-Vnj" secondAttribute="top" id="JJ8-Z2-okV"/>
-                            <constraint firstItem="uZV-TQ-Vnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="PHK-uc-qKT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBf-vh-B1a" secondAttribute="trailing" constant="75" id="YHS-uE-jDU"/>
+                            <constraint firstItem="Pto-TH-VGQ" firstAttribute="top" secondItem="9fc-0R-Ndw" secondAttribute="bottom" constant="28" id="MwC-HS-8fY"/>
                             <constraint firstItem="qFK-aa-fuJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="beB-Kf-2Ik"/>
-                            <constraint firstItem="EBf-vh-B1a" firstAttribute="leading" secondItem="uZV-TQ-Vnj" secondAttribute="trailing" constant="148" id="e8r-fQ-GgL"/>
+                            <constraint firstItem="Pto-TH-VGQ" firstAttribute="trailing" secondItem="9fc-0R-Ndw" secondAttribute="trailing" id="cKW-Fb-7Yz"/>
+                            <constraint firstItem="Pto-TH-VGQ" firstAttribute="leading" secondItem="9fc-0R-Ndw" secondAttribute="leading" id="dCQ-Pl-QTQ"/>
+                            <constraint firstItem="uZV-TQ-Vnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hEV-by-fYc"/>
                             <constraint firstItem="9fc-0R-Ndw" firstAttribute="trailing" secondItem="qFK-aa-fuJ" secondAttribute="trailing" id="kE5-ny-7jP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uZV-TQ-Vnj" secondAttribute="bottom" constant="250" id="kQa-Gy-u6s"/>
                             <constraint firstItem="qFK-aa-fuJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="vec-HY-Rek"/>
-                            <constraint firstItem="uZV-TQ-Vnj" firstAttribute="top" secondItem="9fc-0R-Ndw" secondAttribute="bottom" constant="127" id="wah-QW-26r"/>
                             <constraint firstItem="9fc-0R-Ndw" firstAttribute="top" secondItem="qFK-aa-fuJ" secondAttribute="bottom" constant="28" id="yjb-yx-Lpy"/>
                             <constraint firstItem="9fc-0R-Ndw" firstAttribute="leading" secondItem="qFK-aa-fuJ" secondAttribute="leading" id="ynI-p5-5HI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Pj-PN-a2y"/>
+                    <connections>
+                        <segue destination="XQ0-O2-W8o" kind="show" identifier="adminFlowSegue" id="hhV-11-lCe"/>
+                        <segue destination="sYJ-oj-C72" kind="show" identifier="userFlowSegue" id="xOy-EQ-Wbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,9 +199,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUV-fH-h0J">
                                 <rect key="frame" x="158" y="114" width="59" height="30"/>
                                 <state key="normal" title="AddATM"/>
-                                <connections>
-                                    <segue destination="dk6-Vq-cWj" kind="show" id="U2W-No-Vv6"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,6 +208,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ttn-ZW-Yei"/>
                     </view>
+                    <connections>
+                        <segue destination="dk6-Vq-cWj" kind="show" identifier="addAtmSegue" id="3AF-Fl-8zv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duJ-UN-qCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

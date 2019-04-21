@@ -11,7 +11,6 @@
 		183027D6226B850200E68211 /* ATMListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183027D5226B850200E68211 /* ATMListDataSource.swift */; };
 		183027D8226B8B6400E68211 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183027D7226B8B6400E68211 /* model.swift */; };
 		18375A57226B5E0800DF2CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A56226B5E0800DF2CC6 /* AppDelegate.swift */; };
-		18375A59226B5E0800DF2CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A58226B5E0800DF2CC6 /* ViewController.swift */; };
 		18375A5C226B5E0800DF2CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18375A5A226B5E0800DF2CC6 /* Main.storyboard */; };
 		18375A5F226B5E0800DF2CC6 /* ATMInformation2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18375A5D226B5E0800DF2CC6 /* ATMInformation2.xcdatamodeld */; };
 		18375A61226B5E0A00DF2CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18375A60226B5E0A00DF2CC6 /* Assets.xcassets */; };
@@ -19,6 +18,8 @@
 		18375A6C226B60B100DF2CC6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A6B226B60B100DF2CC6 /* AdminViewController.swift */; };
 		18375A6E226B60CA00DF2CC6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A6D226B60CA00DF2CC6 /* UserViewController.swift */; };
 		18375A70226B693000DF2CC6 /* ATMListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A6F226B693000DF2CC6 /* ATMListViewController.swift */; };
+		18FA91CD226C206700AFC893 /* PIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91CC226C206700AFC893 /* PIdentifiers.swift */; };
+		18FA91CF226C21C700AFC893 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91CE226C21C700AFC893 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,6 @@
 		183027D7226B8B6400E68211 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		18375A53226B5E0800DF2CC6 /* ATMInformation2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMInformation2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18375A56226B5E0800DF2CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18375A58226B5E0800DF2CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18375A5B226B5E0800DF2CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18375A5E226B5E0800DF2CC6 /* ATMInformation2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ATMInformation2.xcdatamodel; sourceTree = "<group>"; };
 		18375A60226B5E0A00DF2CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		18375A6B226B60B100DF2CC6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		18375A6D226B60CA00DF2CC6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		18375A6F226B693000DF2CC6 /* ATMListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMListViewController.swift; sourceTree = "<group>"; };
+		18FA91CC226C206700AFC893 /* PIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIdentifiers.swift; sourceTree = "<group>"; };
+		18FA91CE226C21C700AFC893 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,6 @@
 			children = (
 				18375A6F226B693000DF2CC6 /* ATMListViewController.swift */,
 				18375A56226B5E0800DF2CC6 /* AppDelegate.swift */,
-				18375A58226B5E0800DF2CC6 /* ViewController.swift */,
 				18375A5A226B5E0800DF2CC6 /* Main.storyboard */,
 				18375A6B226B60B100DF2CC6 /* AdminViewController.swift */,
 				18375A6D226B60CA00DF2CC6 /* UserViewController.swift */,
@@ -81,6 +82,8 @@
 				183027D3226B7EC200E68211 /* AtmCell.swift */,
 				183027D5226B850200E68211 /* ATMListDataSource.swift */,
 				183027D7226B8B6400E68211 /* model.swift */,
+				18FA91CC226C206700AFC893 /* PIdentifiers.swift */,
+				18FA91CE226C21C700AFC893 /* LoginViewController.swift */,
 			);
 			path = ATMInformation2;
 			sourceTree = "<group>";
@@ -161,9 +164,10 @@
 				183027D4226B7EC200E68211 /* AtmCell.swift in Sources */,
 				183027D6226B850200E68211 /* ATMListDataSource.swift in Sources */,
 				18375A6E226B60CA00DF2CC6 /* UserViewController.swift in Sources */,
-				18375A59226B5E0800DF2CC6 /* ViewController.swift in Sources */,
 				18375A5F226B5E0800DF2CC6 /* ATMInformation2.xcdatamodeld in Sources */,
+				18FA91CD226C206700AFC893 /* PIdentifiers.swift in Sources */,
 				183027D8226B8B6400E68211 /* model.swift in Sources */,
+				18FA91CF226C21C700AFC893 /* LoginViewController.swift in Sources */,
 				18375A57226B5E0800DF2CC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
