@@ -41,15 +41,15 @@ class User {
         return Model.shared.atms
     }
     func getAtmsBy(associatedBank : String)->[Atm]{
-        let atms : [Atm] = []
+        let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in atm.bankName == associatedBank})
         return atms
     }
     func getAtmsBy(location: String)->[Atm]{
-        let atms : [Atm] = []
+        let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in atm.location == location})
         return atms
     }
     func getAtmsBy(workingStatus : WorkingStatus)->[Atm]{
-        let atms : [Atm] = []
+        let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in atm.workingStatus == workingStatus.rawValue})
         return atms
     }
 }
