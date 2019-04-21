@@ -15,7 +15,8 @@ enum ButtonTitle : String{
 }
 
 class UserViewController: UIViewController {
-    var atms : [Atm] = []
+    private var atms : [Atm]!
+    var user : User!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +40,7 @@ class UserViewController: UIViewController {
         guard let buttonTitle = sender.titleLabel?.text else{
             fatalError()
         }
-        let user = User()
+        
         switch ButtonTitle(rawValue: buttonTitle)! {
         case .allAtms:
             atms = user.getAllAtms()

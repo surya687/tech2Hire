@@ -15,6 +15,9 @@ struct Atm {
 
 class Model{
     var atms : [Atm] = []
+    static let shared : Model = Model()
+    private init(){
+    }
     
 }
 
@@ -23,6 +26,9 @@ enum WorkingStatus : String{
     case notWorking = "Not Working"
 }
 class User {
+    func loginAsUser()->Bool{
+        return true
+    }
     func getAllAtms()->[Atm]{
         let atms : [Atm] = []
         return atms
@@ -42,6 +48,9 @@ class User {
 }
 
 class Admin{
+    func loginAsAdmin()->Bool{
+        return true
+    }
     func addAtm(atm:Atm){
         
     }

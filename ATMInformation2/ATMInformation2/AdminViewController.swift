@@ -9,7 +9,7 @@
 import UIKit
 
 class AdminViewController: UIViewController {
-
+    var admin : Admin!
     override func viewDidLoad() {
         super.viewDidLoad()
 
