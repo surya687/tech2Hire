@@ -23,6 +23,7 @@ class ATMListViewController: UITableViewController,DataSourceDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVc = segue.destination as! AtmDetailViewController
         destinationVc.atm = (sender as! AtmCell).atm
+        destinationVc.mapManager = MapManager()
     }
   
 }

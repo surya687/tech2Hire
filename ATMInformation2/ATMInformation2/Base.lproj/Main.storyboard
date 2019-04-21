@@ -276,6 +276,7 @@
                         <outlet property="acFacility" destination="77U-Ep-yH3" id="RnR-1u-dzu"/>
                         <outlet property="bankName" destination="pYr-oQ-4rz" id="cmI-Oj-LcH"/>
                         <outlet property="location" destination="qeU-6F-IWm" id="KkQ-Pk-7fW"/>
+                        <outlet property="mapView" destination="3DB-uv-W9C" id="aXJ-zK-THC"/>
                         <outlet property="multipleAtmFacility" destination="htD-dC-SRl" id="hIp-Gk-lId"/>
                         <outlet property="workingStatus" destination="dIV-Pl-rB7" id="RJV-YK-mVU"/>
                     </connections>
@@ -335,70 +336,88 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latidude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ka-97-46c">
+                                <rect key="frame" x="20" y="219" width="301" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ref-VQ-wJ3">
-                                <rect key="frame" x="20" y="219" width="301" height="29"/>
+                                <rect key="frame" x="20" y="329" width="301" height="29"/>
                                 <segments>
                                     <segment title="Working"/>
                                     <segment title="Not Working"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ott-bO-rxN">
-                                <rect key="frame" x="20" y="271" width="105" height="24"/>
+                                <rect key="frame" x="20" y="381" width="105" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="keE-cP-OYq">
-                                <rect key="frame" x="272" y="305" width="51" height="31"/>
+                                <rect key="frame" x="272" y="415" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tm-rP-e6E">
-                                <rect key="frame" x="20" y="312" width="92" height="17"/>
+                                <rect key="frame" x="20" y="422" width="92" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MultipleAtms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-wn-QWO">
-                                <rect key="frame" x="20" y="348" width="92" height="17"/>
+                                <rect key="frame" x="20" y="458" width="92" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhz-69-Oxp">
-                                <rect key="frame" x="170.5" y="479" width="34" height="30"/>
+                                <rect key="frame" x="170.5" y="537" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveAtm:" destination="dk6-Vq-cWj" eventType="touchUpInside" id="Jry-dg-h6Q"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-1J-Bcs">
-                                <rect key="frame" x="272" y="341" width="51" height="31"/>
+                                <rect key="frame" x="272" y="451" width="51" height="31"/>
                             </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDU-cT-rl1">
+                                <rect key="frame" x="20" y="274" width="301" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TDU-cT-rl1" firstAttribute="leading" secondItem="0ka-97-46c" secondAttribute="leading" id="37F-Lu-Fbd"/>
+                            <constraint firstItem="0ka-97-46c" firstAttribute="top" secondItem="eqC-yX-ZRs" secondAttribute="bottom" constant="25" id="FLH-tq-h7k"/>
                             <constraint firstItem="ref-VQ-wJ3" firstAttribute="leading" secondItem="eqC-yX-ZRs" secondAttribute="leading" id="Iiu-Qd-wmt"/>
                             <constraint firstItem="0Bf-LU-bQn" firstAttribute="leading" secondItem="gKd-4d-qju" secondAttribute="leading" constant="20" id="JoE-ne-wSy"/>
-                            <constraint firstItem="ref-VQ-wJ3" firstAttribute="top" secondItem="eqC-yX-ZRs" secondAttribute="bottom" constant="25" id="KSz-ZL-QSj"/>
                             <constraint firstItem="0Bf-LU-bQn" firstAttribute="top" secondItem="gKd-4d-qju" secondAttribute="top" constant="45" id="NCZ-aL-SNN"/>
                             <constraint firstItem="eqC-yX-ZRs" firstAttribute="trailing" secondItem="0Bf-LU-bQn" secondAttribute="trailing" id="Nw4-Ae-ci4"/>
                             <constraint firstItem="1tm-rP-e6E" firstAttribute="trailing" secondItem="V9b-wn-QWO" secondAttribute="trailing" id="P2t-qq-qaG"/>
+                            <constraint firstItem="TDU-cT-rl1" firstAttribute="top" secondItem="0ka-97-46c" secondAttribute="bottom" constant="25" id="QFK-Ee-fi5"/>
                             <constraint firstItem="ref-VQ-wJ3" firstAttribute="trailing" secondItem="eqC-yX-ZRs" secondAttribute="trailing" id="RKb-qI-zpc"/>
                             <constraint firstItem="eqC-yX-ZRs" firstAttribute="leading" secondItem="0Bf-LU-bQn" secondAttribute="leading" id="TS6-qr-egE"/>
                             <constraint firstItem="cQW-1J-Bcs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="V9b-wn-QWO" secondAttribute="trailing" constant="160" id="Uxu-Lb-Qf9"/>
                             <constraint firstItem="1tm-rP-e6E" firstAttribute="centerY" secondItem="keE-cP-OYq" secondAttribute="centerY" id="WT1-LT-Ls7"/>
                             <constraint firstItem="V9b-wn-QWO" firstAttribute="leading" secondItem="Ott-bO-rxN" secondAttribute="leading" id="XkO-by-dP7"/>
                             <constraint firstItem="gKd-4d-qju" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0Bf-LU-bQn" secondAttribute="trailing" constant="54" id="bV8-94-3gX"/>
+                            <constraint firstItem="0ka-97-46c" firstAttribute="trailing" secondItem="eqC-yX-ZRs" secondAttribute="trailing" id="brg-KY-Hud"/>
                             <constraint firstItem="keE-cP-OYq" firstAttribute="trailing" secondItem="ref-VQ-wJ3" secondAttribute="trailing" id="c0p-WM-yue"/>
                             <constraint firstItem="eqC-yX-ZRs" firstAttribute="top" secondItem="0Bf-LU-bQn" secondAttribute="bottom" constant="25" id="dEd-me-s2i"/>
                             <constraint firstItem="Ott-bO-rxN" firstAttribute="top" secondItem="ref-VQ-wJ3" secondAttribute="bottom" constant="24" id="dZT-ea-Utd"/>
+                            <constraint firstItem="ref-VQ-wJ3" firstAttribute="top" secondItem="TDU-cT-rl1" secondAttribute="bottom" constant="25" id="mts-EQ-fLZ"/>
                             <constraint firstItem="Ott-bO-rxN" firstAttribute="leading" secondItem="ref-VQ-wJ3" secondAttribute="leading" id="my1-9g-d4h"/>
                             <constraint firstItem="cQW-1J-Bcs" firstAttribute="top" secondItem="keE-cP-OYq" secondAttribute="bottom" constant="5" id="mzA-Ca-36W"/>
                             <constraint firstItem="1tm-rP-e6E" firstAttribute="leading" secondItem="Ott-bO-rxN" secondAttribute="leading" id="pR4-ya-brT"/>
                             <constraint firstItem="gKd-4d-qju" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Ott-bO-rxN" secondAttribute="trailing" constant="250" id="pi3-Uv-lcn"/>
                             <constraint firstItem="V9b-wn-QWO" firstAttribute="centerY" secondItem="cQW-1J-Bcs" secondAttribute="centerY" id="ppt-8c-w1y"/>
                             <constraint firstItem="Bhz-69-Oxp" firstAttribute="centerX" secondItem="DJi-Kl-Q8k" secondAttribute="centerX" id="puq-8k-nkm"/>
+                            <constraint firstItem="0ka-97-46c" firstAttribute="leading" secondItem="eqC-yX-ZRs" secondAttribute="leading" id="qmN-1M-nI8"/>
+                            <constraint firstItem="TDU-cT-rl1" firstAttribute="trailing" secondItem="0ka-97-46c" secondAttribute="trailing" id="rp8-NZ-FJ8"/>
                             <constraint firstItem="cQW-1J-Bcs" firstAttribute="leading" secondItem="keE-cP-OYq" secondAttribute="leading" id="tA3-bd-xiV"/>
-                            <constraint firstItem="gKd-4d-qju" firstAttribute="bottom" secondItem="Bhz-69-Oxp" secondAttribute="bottom" constant="158" id="u2x-7N-pRR"/>
+                            <constraint firstItem="gKd-4d-qju" firstAttribute="bottom" secondItem="Bhz-69-Oxp" secondAttribute="bottom" constant="100" id="u2x-7N-pRR"/>
                             <constraint firstItem="keE-cP-OYq" firstAttribute="top" secondItem="Ott-bO-rxN" secondAttribute="bottom" constant="10" id="vG1-LZ-4Mt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKd-4d-qju"/>
@@ -406,7 +425,9 @@
                     <connections>
                         <outlet property="acFacility" destination="keE-cP-OYq" id="e99-gz-a2f"/>
                         <outlet property="associatedBank" destination="0Bf-LU-bQn" id="zhB-mP-Nj0"/>
+                        <outlet property="latitude" destination="0ka-97-46c" id="E67-Xw-sJL"/>
                         <outlet property="location" destination="eqC-yX-ZRs" id="nkY-Fi-S5R"/>
+                        <outlet property="longitude" destination="TDU-cT-rl1" id="26G-qp-ZgM"/>
                         <outlet property="multipleAtmsFacility" destination="cQW-1J-Bcs" id="jP8-Bw-cty"/>
                         <outlet property="workingStatus" destination="ref-VQ-wJ3" id="KfG-bD-TpR"/>
                     </connections>

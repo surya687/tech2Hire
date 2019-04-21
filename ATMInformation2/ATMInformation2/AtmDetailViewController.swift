@@ -7,20 +7,25 @@
 //
 
 import UIKit
-
+import MapKit
 class AtmDetailViewController: UIViewController {
     var atm : Atm!
+    var mapManager : MapManager!
+    
     @IBOutlet weak var bankName: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var workingStatus: UILabel!
     
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var acFacility: UILabel!
     @IBOutlet weak var multipleAtmFacility: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presentAtmDetails()
+        mapView.addAnnotation(mapManager.locate(atm: atm))
         // Do any additional setup after loading the view.
+        
     }
     
     private func presentAtmDetails(){
@@ -34,6 +39,7 @@ class AtmDetailViewController: UIViewController {
             self.multipleAtmFacility.isHidden = !multipleAtms
         }
     }
+    
     
 
     /*

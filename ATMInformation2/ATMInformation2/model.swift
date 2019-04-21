@@ -10,14 +10,18 @@ import Foundation
 struct Atm {
     let bankName : String?
     let location : String?
+    let latitude : Double?
+    let logitude : Double?
     let workingStatus : String?
     let facilities : [String : Bool]?
     
-    init(bankName:String,location:String,workingStatus : String,facilities : [String:Bool]) {
+    init(bankName:String,location:String,latitude:Double,logitude:Double,workingStatus : String,facilities : [String:Bool]) {
         self.bankName = bankName
         self.location = location
         self.workingStatus = workingStatus
         self.facilities = facilities
+        self.latitude = latitude
+        self.logitude = logitude
     }
 }
 
@@ -33,6 +37,7 @@ enum WorkingStatus : String{
     case working = "Working"
     case notWorking = "Not Working"
 }
+
 class User {
     func loginAsUser()->Bool{
         return true

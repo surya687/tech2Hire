@@ -13,6 +13,10 @@ class NewATMFormViewController: UIViewController {
     
     @IBOutlet weak var associatedBank: UITextField!
     @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var latitude: UITextField!
+    @IBOutlet weak var longitude: UITextField!
+    
+    
     @IBOutlet weak var workingStatus: UISegmentedControl!
     
     @IBOutlet weak var acFacility: UISwitch!
@@ -29,7 +33,14 @@ class NewATMFormViewController: UIViewController {
         facilities.updateValue(acFacility.isOn, forKey: "Ac")
         facilities.updateValue(multipleAtmsFacility.isOn, forKey: "MultipleAtms")
         let workingStat = workingStatus.titleForSegment(at: workingStatus.selectedSegmentIndex)
-        let atm = Atm(bankName: associatedBank.text!, location: location.text!, workingStatus: workingStat!, facilities: facilities)
+        
+        
+        let atm = Atm(bankName: associatedBank.text!,
+                      location: location.text!,
+                      latitude: Double(latitude.text!)!,
+                      logitude: Double(longitude.text!)!,
+                      workingStatus: workingStat!,
+                      facilities: facilities)
         admin.addAtm(atm: atm)
         
     }
