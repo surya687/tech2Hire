@@ -18,6 +18,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        clearFields()
+    }
     
 
 
@@ -37,6 +40,14 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func login(_ sender: UIButton) {
+        self.adminOrUser.resignFirstResponder()
+        self.id.resignFirstResponder()
+        self.password.resignFirstResponder()
+        
+        guard validateFields() else{
+            return
+        }
+        
         if adminOrUser.text == "Admin"{
             let admin = Admin()
             if admin.loginAsAdmin(){
@@ -48,6 +59,31 @@ class LoginViewController: UIViewController {
         }else{
             print("Enter Admin or User")
         }
+    }
+    
+    private func validateFields()->Bool{
+        guard let adminOrUser = self.adminOrUser.text,adminOrUser != "" else{
+            print("Enter Admin or User")
+            return false
+        }
+        guard let id = self.id.text,id != "" else{
+            print("Enter Valid Id")
+            return false
+        }
+        guard let password = self.password.text,password != "" else{
+            print("Enter Valid Password")
+            return false
+        }
+    
+        return true
+    }
+    
+    private func clearFields(){
+        self.adminOrUser.text = nil
+        self.id.text = nil
+        self.password.text = nil
+        
+        
     }
     
 
