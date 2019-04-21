@@ -43,16 +43,16 @@ class UserViewController: UIViewController {
         switch ButtonTitle(rawValue: buttonTitle)! {
         case .allAtms:
             atms = user.getAllAtms()
-            performSegue(withIdentifier: "atmListSegue", sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchAtmByBank:
             atms = user.getAtmsBy(associatedBank: "SBI")
-            performSegue(withIdentifier: "atmListSegue", sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchAtmByLocation:
             atms = user.getAtmsBy(location: "Bhimavaram")
-            performSegue(withIdentifier: "atmListSegue", sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchAtmByWorkingStatus:
             atms = user.getAtmsBy(workingStatus: .working)
-            performSegue(withIdentifier: "atmListSegue", sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         }
     }
     

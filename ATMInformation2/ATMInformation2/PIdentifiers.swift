@@ -7,9 +7,9 @@
 //
 
 import Foundation
-enum SegueIdentifiers : String{
-    case addAtmSegue = "addAtmSegue"
-    case atmListSegue = "atmListSegue"
-    case adminFlowSegue = "adminFlowSegue"
-    case userFlowSegue = "userFlowSegue"
+struct SegueIdentifiers{
+    static let addAtmSegue = "addAtmSegue"
+    static let  atmListSegue = "atmListSegue"
+    static let  adminFlowSegue = "adminFlowSegue"
+    static let  userFlowSegue = "userFlowSegue"
 }
