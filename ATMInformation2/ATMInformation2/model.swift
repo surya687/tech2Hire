@@ -39,6 +39,12 @@ enum WorkingStatus : String{
 }
 
 class User {
+    let mapManager : MapManager!
+    
+    init(mapManager : MapManager){
+        self.mapManager = mapManager
+    }
+    
     func loginAsUser()->Bool{
         return true
     }
@@ -49,8 +55,10 @@ class User {
         let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in atm.bankName == associatedBank})
         return atms
     }
-    func getAtmsBy(location: String)->[Atm]{
-        let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in atm.location == location})
+
+    //Filters the Atms around 100km distance from the user
+    func getAtmsByUserLocation()->[Atm]{
+         let atms : [Atm] = Model.shared.atms.filter({(atm: Atm)->Bool in mapManager.getAtmDistanceFromUser(atm: atm) < 100000})
         return atms
     }
     func getAtmsBy(workingStatus : WorkingStatus)->[Atm]{

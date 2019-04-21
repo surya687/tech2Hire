@@ -10,7 +10,7 @@ import UIKit
 enum ButtonTitle : String{
     case allAtms = "AllAtms"
     case searchAtmByBank = "SearchATMsByBank"
-    case searchAtmByLocation = "SearchATMsByLocation"
+    case searchATMsByUserLocation = "SearchATMsByUserLocation"
     case searchAtmByWorkingStatus = "SearchATMsByWorkingStatus"
 }
 
@@ -49,8 +49,9 @@ class UserViewController: UIViewController {
         case .searchAtmByBank:
             atms = user.getAtmsBy(associatedBank: "SBI")
             performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
-        case .searchAtmByLocation:
-            atms = user.getAtmsBy(location: "Bhimavaram")
+        case .searchATMsByUserLocation:
+//            atms = user.getAtmsBy(location: "Bhimavaram")
+            atms = user.getAtmsByUserLocation()
             performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchAtmByWorkingStatus:
             atms = user.getAtmsBy(workingStatus: .working)

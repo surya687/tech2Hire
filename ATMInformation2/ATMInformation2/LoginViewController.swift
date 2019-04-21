@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
                 performSegue(withIdentifier: SegueIdentifiers.adminFlowSegue, sender: admin)
             }
         }else if adminOrUser.text == "User"{
-            let user = User()
+            let user = User(mapManager: MapManager())
             performSegue(withIdentifier: SegueIdentifiers.userFlowSegue, sender: user)
         }else{
             print("Enter Admin or User")
