@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ATMListViewController: UITableViewController {
+class ATMListViewController: UITableViewController,DataSourceDelegate {
     var dataSource : (UITableViewDataSource & UITableViewDelegate)?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,9 @@ class ATMListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVc = segue.destination as! AtmDetailViewController
+        destinationVc.atm = (sender as! AtmCell).atm
+    }
+  
 }

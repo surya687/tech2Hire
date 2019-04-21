@@ -9,7 +9,8 @@
 import Foundation
 struct SegueIdentifiers{
     static let addAtmSegue = "addAtmSegue"
-    static let  atmListSegue = "atmListSegue"
-    static let  adminFlowSegue = "adminFlowSegue"
-    static let  userFlowSegue = "userFlowSegue"
+    static let atmListSegue = "atmListSegue"
+    static let adminFlowSegue = "adminFlowSegue"
+    static let userFlowSegue = "userFlowSegue"
+    static let atmDetailSegue = "atmDetailSegue"
 }

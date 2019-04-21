@@ -32,6 +32,7 @@ class UserViewController: UIViewController {
         // Pass the selected object to the new view controller.
         let destinationVC = segue.destination as! ATMListViewController
         let dataSource = ATMListDataSource()
+        dataSource.dataSourceDelegate = destinationVC
         dataSource.atms = atms
         destinationVC.dataSource = dataSource
     }

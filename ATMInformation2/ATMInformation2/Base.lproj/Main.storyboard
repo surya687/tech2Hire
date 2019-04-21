@@ -189,10 +189,100 @@
                             <outlet property="delegate" destination="Doj-FM-ctI" id="eLp-vu-3jz"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="1v4-6r-tmd" kind="show" identifier="atmDetailSegue" id="xLF-aa-cn7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0F-cU-YVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2829" y="543"/>
+        </scene>
+        <!--Atm Detail View Controller-->
+        <scene sceneID="vrg-ul-pkQ">
+            <objects>
+                <viewController id="1v4-6r-tmd" customClass="AtmDetailViewController" customModule="ATMInformation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LES-lo-gd8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BankName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYr-oQ-4rz">
+                                <rect key="frame" x="16" y="75" width="109" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-6F-IWm">
+                                <rect key="frame" x="16" y="99" width="109" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woking Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIV-Pl-rB7">
+                                <rect key="frame" x="16" y="123" width="109" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWD-3S-iM8">
+                                <rect key="frame" x="16" y="147" width="109" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-uv-W9C">
+                                <rect key="frame" x="0.0" y="221" width="375" height="446"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77U-Ep-yH3">
+                                <rect key="frame" x="22" y="176" width="85" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MultipleAtms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htD-dC-SRl">
+                                <rect key="frame" x="22" y="196" width="85" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="77U-Ep-yH3" firstAttribute="leading" secondItem="yWD-3S-iM8" secondAttribute="leading" constant="6" id="1gg-79-VaJ"/>
+                            <constraint firstItem="3DB-uv-W9C" firstAttribute="top" secondItem="htD-dC-SRl" secondAttribute="bottom" constant="8" id="4t8-Wd-Sug"/>
+                            <constraint firstItem="yWD-3S-iM8" firstAttribute="top" secondItem="dIV-Pl-rB7" secondAttribute="bottom" constant="4" id="9Ch-RD-c4T"/>
+                            <constraint firstItem="qeU-6F-IWm" firstAttribute="leading" secondItem="pYr-oQ-4rz" secondAttribute="leading" id="B5K-MH-tYR"/>
+                            <constraint firstItem="pYr-oQ-4rz" firstAttribute="leading" secondItem="U1z-Ce-c3b" secondAttribute="leading" constant="16" id="BL8-OU-D2I"/>
+                            <constraint firstAttribute="bottom" secondItem="3DB-uv-W9C" secondAttribute="bottom" id="I6F-S9-2Nw"/>
+                            <constraint firstItem="qeU-6F-IWm" firstAttribute="trailing" secondItem="pYr-oQ-4rz" secondAttribute="trailing" id="KAU-IG-3VC"/>
+                            <constraint firstItem="dIV-Pl-rB7" firstAttribute="top" secondItem="qeU-6F-IWm" secondAttribute="bottom" constant="4" id="NSi-lk-5Ue"/>
+                            <constraint firstItem="pYr-oQ-4rz" firstAttribute="top" secondItem="U1z-Ce-c3b" secondAttribute="top" constant="11" id="V1q-Uw-AQy"/>
+                            <constraint firstItem="dIV-Pl-rB7" firstAttribute="trailing" secondItem="qeU-6F-IWm" secondAttribute="trailing" id="Yjq-lB-BWI"/>
+                            <constraint firstItem="U1z-Ce-c3b" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pYr-oQ-4rz" secondAttribute="trailing" constant="250" id="bYk-bQ-BKN"/>
+                            <constraint firstItem="htD-dC-SRl" firstAttribute="top" secondItem="77U-Ep-yH3" secondAttribute="bottom" constant="3" id="ccB-qN-kg4"/>
+                            <constraint firstItem="qeU-6F-IWm" firstAttribute="top" secondItem="pYr-oQ-4rz" secondAttribute="bottom" constant="4" id="cng-wR-Qkv"/>
+                            <constraint firstItem="U1z-Ce-c3b" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="77U-Ep-yH3" secondAttribute="trailing" constant="300" id="dHW-a3-UbW"/>
+                            <constraint firstItem="yWD-3S-iM8" firstAttribute="trailing" secondItem="dIV-Pl-rB7" secondAttribute="trailing" id="hbc-8q-JVx"/>
+                            <constraint firstItem="yWD-3S-iM8" firstAttribute="leading" secondItem="dIV-Pl-rB7" secondAttribute="leading" id="ilC-qI-Oc2"/>
+                            <constraint firstItem="htD-dC-SRl" firstAttribute="trailing" secondItem="77U-Ep-yH3" secondAttribute="trailing" id="lfF-02-ypM"/>
+                            <constraint firstItem="htD-dC-SRl" firstAttribute="leading" secondItem="77U-Ep-yH3" secondAttribute="leading" id="p9C-XB-kQC"/>
+                            <constraint firstItem="3DB-uv-W9C" firstAttribute="leading" secondItem="U1z-Ce-c3b" secondAttribute="leading" id="pMC-wK-rg5"/>
+                            <constraint firstItem="dIV-Pl-rB7" firstAttribute="leading" secondItem="qeU-6F-IWm" secondAttribute="leading" id="sXP-VH-m4J"/>
+                            <constraint firstItem="77U-Ep-yH3" firstAttribute="top" secondItem="yWD-3S-iM8" secondAttribute="bottom" constant="3" id="sgJ-gH-GH4"/>
+                            <constraint firstItem="3DB-uv-W9C" firstAttribute="trailing" secondItem="U1z-Ce-c3b" secondAttribute="trailing" id="x3d-Jy-Ycc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U1z-Ce-c3b"/>
+                    </view>
+                    <connections>
+                        <outlet property="acFacility" destination="77U-Ep-yH3" id="RnR-1u-dzu"/>
+                        <outlet property="bankName" destination="pYr-oQ-4rz" id="cmI-Oj-LcH"/>
+                        <outlet property="location" destination="qeU-6F-IWm" id="KkQ-Pk-7fW"/>
+                        <outlet property="multipleAtmFacility" destination="htD-dC-SRl" id="hIp-Gk-lId"/>
+                        <outlet property="workingStatus" destination="dIV-Pl-rB7" id="RJV-YK-mVU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Kc-bg-WKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3717.5999999999999" y="544.67766116941539"/>
         </scene>
         <!--Admin View Controller-->
         <scene sceneID="tWZ-fZ-KVs">
