@@ -17,6 +17,8 @@ enum ButtonTitle : String{
 class UserViewController: UIViewController {
     private var atms : [Atm]!
     var user : User!
+    
+    @IBOutlet weak var bankAssociated: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +49,11 @@ class UserViewController: UIViewController {
             atms = user.getAllAtms()
             performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchAtmByBank:
-            atms = user.getAtmsBy(associatedBank: "SBI")
+            guard let bankName = bankAssociated.text,bankName != "" else{
+                print("Enter valid Bank name")
+                return
+            }
+            atms = user.getAtmsBy(associatedBank: bankName )
             performSegue(withIdentifier: SegueIdentifiers.atmListSegue, sender: self)
         case .searchATMsByUserLocation:
 //            atms = user.getAtmsBy(location: "Bhimavaram")

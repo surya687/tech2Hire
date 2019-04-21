@@ -89,47 +89,57 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-Lz-XNZ">
-                                <rect key="frame" x="118.5" y="194" width="138" height="30"/>
+                                <rect key="frame" x="118.5" y="244" width="138" height="30"/>
                                 <state key="normal" title="SearchATMsByBank"/>
                                 <connections>
                                     <action selector="getAtms:" destination="sYJ-oj-C72" eventType="touchUpInside" id="V0J-0V-4f0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-SU-T9U">
-                                <rect key="frame" x="90" y="244" width="195" height="30"/>
+                                <rect key="frame" x="90" y="294" width="195" height="30"/>
                                 <state key="normal" title="SearchATMsByUserLocation"/>
                                 <connections>
                                     <action selector="getAtms:" destination="sYJ-oj-C72" eventType="touchUpInside" id="KvJ-uX-65N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-Tm-VG1">
-                                <rect key="frame" x="85.5" y="294" width="204" height="30"/>
+                                <rect key="frame" x="85.5" y="344" width="204" height="30"/>
                                 <state key="normal" title="SearchATMsByWorkingStatus"/>
                                 <connections>
                                     <action selector="getAtms:" destination="sYJ-oj-C72" eventType="touchUpInside" id="045-g9-cka"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vL-xN-Cp6">
+                                <rect key="frame" x="64" y="194" width="257" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DCA-Ic-DON" firstAttribute="top" secondItem="Iee-t4-G9y" secondAttribute="top" constant="80" id="9Nq-K7-EhJ"/>
                             <constraint firstItem="9Rh-SU-T9U" firstAttribute="top" secondItem="I9a-Lz-XNZ" secondAttribute="bottom" constant="20" id="Hfn-CN-OgK"/>
                             <constraint firstItem="DCA-Ic-DON" firstAttribute="centerX" secondItem="1BI-2H-yiL" secondAttribute="centerX" id="XXv-pj-4hJ"/>
+                            <constraint firstItem="5vL-xN-Cp6" firstAttribute="top" secondItem="DCA-Ic-DON" secondAttribute="bottom" constant="20" id="Xxp-aL-fhX"/>
+                            <constraint firstItem="I9a-Lz-XNZ" firstAttribute="top" secondItem="5vL-xN-Cp6" secondAttribute="bottom" constant="20" id="a7r-1D-sib"/>
                             <constraint firstItem="I9a-Lz-XNZ" firstAttribute="centerX" secondItem="1BI-2H-yiL" secondAttribute="centerX" id="b1L-X2-450"/>
                             <constraint firstItem="Zki-Tm-VG1" firstAttribute="centerX" secondItem="1BI-2H-yiL" secondAttribute="centerX" id="cZq-CA-FFt"/>
-                            <constraint firstItem="I9a-Lz-XNZ" firstAttribute="top" secondItem="DCA-Ic-DON" secondAttribute="bottom" constant="20" id="gPY-eA-ZhR"/>
                             <constraint firstItem="9Rh-SU-T9U" firstAttribute="centerX" secondItem="1BI-2H-yiL" secondAttribute="centerX" id="mgI-3v-Ujp"/>
+                            <constraint firstItem="5vL-xN-Cp6" firstAttribute="leading" secondItem="Iee-t4-G9y" secondAttribute="leading" constant="64" id="n3q-Fo-42a"/>
+                            <constraint firstItem="Iee-t4-G9y" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5vL-xN-Cp6" secondAttribute="trailing" constant="54" id="wy0-3P-jkD"/>
                             <constraint firstItem="Zki-Tm-VG1" firstAttribute="top" secondItem="9Rh-SU-T9U" secondAttribute="bottom" constant="20" id="y72-Tw-Tja"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iee-t4-G9y"/>
                     </view>
                     <connections>
+                        <outlet property="bankAssociated" destination="5vL-xN-Cp6" id="alg-l9-9oX"/>
                         <segue destination="Doj-FM-ctI" kind="show" identifier="atmListSegue" id="0eN-n2-jQ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJZ-eC-HgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934" y="549"/>
+            <point key="canvasLocation" x="1933.5999999999999" y="548.27586206896558"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="h3P-ZU-42b">
