@@ -8,9 +8,17 @@
 
 import Foundation
 struct Atm {
-    var bankName : String?
-    var location : String?
-    var workingStatus : String?
+    let bankName : String?
+    let location : String?
+    let workingStatus : String?
+    let facilities : [String : Bool]?
+    
+    init(bankName:String,location:String,workingStatus : String,facilities : [String:Bool]) {
+        self.bankName = bankName
+        self.location = location
+        self.workingStatus = workingStatus
+        self.facilities = facilities
+    }
 }
 
 class Model{
@@ -30,8 +38,7 @@ class User {
         return true
     }
     func getAllAtms()->[Atm]{
-        let atms : [Atm] = []
-        return atms
+        return Model.shared.atms
     }
     func getAtmsBy(associatedBank : String)->[Atm]{
         let atms : [Atm] = []
@@ -52,7 +59,7 @@ class Admin{
         return true
     }
     func addAtm(atm:Atm){
-        
+        Model.shared.atms.append(atm)
     }
     
 }

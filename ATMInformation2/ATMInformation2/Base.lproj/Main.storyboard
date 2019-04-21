@@ -205,6 +205,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUV-fH-h0J">
                                 <rect key="frame" x="158" y="114" width="59" height="30"/>
                                 <state key="normal" title="AddATM"/>
+                                <connections>
+                                    <action selector="addAtm:" destination="XQ0-O2-W8o" eventType="touchUpInside" id="dTY-JN-zjp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="1958" y="-456"/>
         </scene>
-        <!--View Controller-->
+        <!--NewATM Form View Controller-->
         <scene sceneID="hPZ-Uk-pgf">
             <objects>
-                <viewController id="dk6-Vq-cWj" sceneMemberID="viewController">
+                <viewController id="dk6-Vq-cWj" customClass="NewATMFormViewController" customModule="ATMInformation2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DJi-Kl-Q8k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +249,7 @@
                                 <rect key="frame" x="20" y="219" width="301" height="29"/>
                                 <segments>
                                     <segment title="Working"/>
-                                    <segment title="NotWorking"/>
+                                    <segment title="Not Working"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ott-bO-rxN">
@@ -255,7 +258,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keE-cP-OYq">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="keE-cP-OYq">
                                 <rect key="frame" x="272" y="305" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tm-rP-e6E">
@@ -273,8 +276,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhz-69-Oxp">
                                 <rect key="frame" x="170.5" y="479" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveAtm:" destination="dk6-Vq-cWj" eventType="touchUpInside" id="Jry-dg-h6Q"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-1J-Bcs">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-1J-Bcs">
                                 <rect key="frame" x="272" y="341" width="51" height="31"/>
                             </switch>
                         </subviews>
@@ -307,6 +313,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKd-4d-qju"/>
                     </view>
+                    <connections>
+                        <outlet property="acFacility" destination="keE-cP-OYq" id="e99-gz-a2f"/>
+                        <outlet property="associatedBank" destination="0Bf-LU-bQn" id="zhB-mP-Nj0"/>
+                        <outlet property="location" destination="eqC-yX-ZRs" id="nkY-Fi-S5R"/>
+                        <outlet property="multipleAtmsFacility" destination="cQW-1J-Bcs" id="jP8-Bw-cty"/>
+                        <outlet property="workingStatus" destination="ref-VQ-wJ3" id="KfG-bD-TpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAG-ck-H0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

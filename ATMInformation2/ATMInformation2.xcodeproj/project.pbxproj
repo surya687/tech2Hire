@@ -20,6 +20,7 @@
 		18375A70226B693000DF2CC6 /* ATMListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18375A6F226B693000DF2CC6 /* ATMListViewController.swift */; };
 		18FA91CD226C206700AFC893 /* PIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91CC226C206700AFC893 /* PIdentifiers.swift */; };
 		18FA91CF226C21C700AFC893 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91CE226C21C700AFC893 /* LoginViewController.swift */; };
+		18FA91D1226C34DB00AFC893 /* NewATMFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91D0226C34DB00AFC893 /* NewATMFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		18375A6F226B693000DF2CC6 /* ATMListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMListViewController.swift; sourceTree = "<group>"; };
 		18FA91CC226C206700AFC893 /* PIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIdentifiers.swift; sourceTree = "<group>"; };
 		18FA91CE226C21C700AFC893 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18FA91D0226C34DB00AFC893 /* NewATMFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewATMFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				18375A56226B5E0800DF2CC6 /* AppDelegate.swift */,
 				18375A5A226B5E0800DF2CC6 /* Main.storyboard */,
 				18375A6B226B60B100DF2CC6 /* AdminViewController.swift */,
+				18FA91D0226C34DB00AFC893 /* NewATMFormViewController.swift */,
 				18375A6D226B60CA00DF2CC6 /* UserViewController.swift */,
 				18375A60226B5E0A00DF2CC6 /* Assets.xcassets */,
 				18375A62226B5E0A00DF2CC6 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 				18375A6E226B60CA00DF2CC6 /* UserViewController.swift in Sources */,
 				18375A5F226B5E0800DF2CC6 /* ATMInformation2.xcdatamodeld in Sources */,
 				18FA91CD226C206700AFC893 /* PIdentifiers.swift in Sources */,
+				18FA91D1226C34DB00AFC893 /* NewATMFormViewController.swift in Sources */,
 				183027D8226B8B6400E68211 /* model.swift in Sources */,
 				18FA91CF226C21C700AFC893 /* LoginViewController.swift in Sources */,
 				18375A57226B5E0800DF2CC6 /* AppDelegate.swift in Sources */,

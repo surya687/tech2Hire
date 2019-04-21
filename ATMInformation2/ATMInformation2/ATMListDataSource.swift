@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class ATMListDataSource :NSObject,UITableViewDataSource,UITableViewDelegate{
     
-    var atms : [Atm]?
+    var atms : [Atm]!
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -28,7 +28,7 @@ class ATMListDataSource :NSObject,UITableViewDataSource,UITableViewDelegate{
         cell.bankName.text = atms![indexPath.row].bankName
         cell.location.text = atms![indexPath.row].location
         cell.workingStatus.text = atms![indexPath.row].workingStatus
-        return UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
